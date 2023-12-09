@@ -1,22 +1,9 @@
-/*
-<div id='parent'>
-    <div id='child1'>
-        <h1>I'm h1 tag</h1>
-        <h2>I'm h2 tag</h2>
-    </div>
-    <div id='child2'>
-        <h1>I'm h1 tag</h1>
-        <h2>I'm h2 tag</h2>
-    </div>
-</div>
-*/
-
-// React Element is an object
-// When the react element renders on to the the DOM it converts into html that the browser understands
+import React from "react";
+import ReactDOM from 'react-dom/client';
 
 const parent = React.createElement("div", {id: 'parent'}, [
     React.createElement("div", {id: 'child1'},[
-        React.createElement("h1", {}, "I'm h1 tag"),
+        React.createElement("h1", {}, "This is the Namaste React Course"),
         React.createElement("h2", {}, "I'm h2 tag")
     ]),
     React.createElement("div", {id: 'child2'},[
@@ -25,7 +12,6 @@ const parent = React.createElement("div", {id: 'parent'}, [
     ])
 ])
 
-console.log(parent);
 
 const heading  = React.createElement("h1", {id:"heading"},  "Hello World from React");
 

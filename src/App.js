@@ -1,30 +1,40 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
+import Header from "./components/Header";
+import Body from "./components/Body";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+// Episode - 05
+// React uses Reconciliation Algorithm (React Fiber) 
+// Virtual DOM is a object representation of actual DOM.
+// React creates an object of a component and this object is basically a react virtual dom. So, react virtual dom is nothing but a normal javascript object. 
+
+
+// Diff Alorithm : It finds out the difference between the updated Virtual DOM and the previous Virtual DOM. It then calculate the difference it basically updates the actual DOM using the updated Virtual DOM on every render cycle. This algo falls under React Fiber.
+
 // Episode - 04
 
-const Header = () => {
-    return  (
-        <div className="header">
-            <div className="logo-container">
-                <img 
-                    className="logo" 
-                    src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png" 
-                />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    );
-}
+// const Header = () => {
+//     return  (
+//         <div className="header">
+//             <div className="logo-container">
+//                 <img 
+//                     className="logo" 
+//                     src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png" 
+//                 />
+//             </div>
+//             <div className="nav-items">
+//                 <ul>
+//                     <li>Home</li>
+//                     <li>About Us</li>
+//                     <li>Contact Us</li>
+//                     <li>Cart</li>
+//                 </ul>
+//             </div>
+//         </div>
+//     );
+// }
 
 const resList = [
   {
@@ -2070,45 +2080,45 @@ const resList = [
   },
 ];
 
-const RestaurantCard = (props) => {
-    const {resData} = props;
-    const{
-      cloudinaryImageId,
-      name,
-      cuisines,
-      avgRating,
-      costForTwo,
-      deliveryTime
-    } = resData?.data;
+// const RestaurantCard = (props) => {
+//     const {resData} = props;
+//     const{
+//       cloudinaryImageId,
+//       name,
+//       cuisines,
+//       avgRating,
+//       costForTwo,
+//       deliveryTime
+//     } = resData?.data;
 
-    return (
-        <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
-            <img 
-                className="res-logo"
-                src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}
-            />
-            <h3>{name}</h3>
-            <h4>{cuisines.join(", ")}</h4>
-            <h4>{avgRating} stars</h4>
-            <h4>₹{costForTwo/100} FOR TWO</h4>
-            <h4>{deliveryTime} minutes</h4>
-        </div>
-    );
-}
+//     return (
+//         <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
+//             <img 
+//                 className="res-logo"
+//                 src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}
+//             />
+//             <h3>{name}</h3>
+//             <h4>{cuisines.join(", ")}</h4>
+//             <h4>{avgRating} stars</h4>
+//             <h4>₹{costForTwo/100} FOR TWO</h4>
+//             <h4>{deliveryTime} minutes</h4>
+//         </div>
+//     );
+// }
 
 // Props(Properties) -> These are something you can pass to a component. If we want to dynamically pass data to a component, we can pass it as a prop. Props, at the end of the day are just arguments to a javascript function (as a functional component is nothing but a js function).
-const Body = () => {
-    return (
-        <div className="body">
-            <div className="search">Search</div>
-            <div className="res-container">
-                {resList.map(restaurant => (
-                  <RestaurantCard key={restaurant.data.id} resData={restaurant} />
-                ))}
-            </div>
-        </div> 
-    );
-}
+// const Body = () => {
+//     return (
+//         <div className="body">
+//             <div className="search">Search</div>
+//             <div className="res-container">
+//                 {resList.map(restaurant => (
+//                   <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+//                 ))}
+//             </div>
+//         </div> 
+//     );
+// }
 
 
 const AppLayout = () => {

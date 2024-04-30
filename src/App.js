@@ -5,11 +5,22 @@ import Body from "./components/Body";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+// Episode - 06
+// Monolith Architecture : Traditionally the web apps were developed using the monolith architecture.
+// It is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other application. A monolithic architecture is a singular, large computing network with one code base that couples all of the business concerns together. To make a change to this sort of application requires updating the entire stack by accessing the code base and building and delpoying an updated version of the service-side interface. This makes updates restrictive and time-consuming, means we are not dividing software into small, well defined modules. We used every services like database, server or UI of the application in one application file.
+
+// Microservice : Also known as the microservice architecture - is and architectural and organizational approach to software development where software is composed of small independent services like database, server or a UI of the application, that communicate over well-defined APIs. These services are owned by small, self-contained teams. Microservice architecture makes appplications easier to scale and faster to develop, enabling innovation and accelerating time-to-market for new features. Means dividing small, well-defined modules enables teams to use functions for multiple purposes.
+// For each and every small thing, we have different project and this is knows as seperation of concerns. 
+// It follows a single responsibility pricipal where each and every service has its own job.
+// These services interacts with each other to make the whole application work.
+// The advantage of microservice architecture is that we can use different tech stacks to built different services.
+
 // Episode - 05
 // React uses Reconciliation Algorithm (React Fiber) 
 // Virtual DOM is a object representation of actual DOM.
 // React creates an object of a component and this object is basically a react virtual dom. So, react virtual dom is nothing but a normal javascript object. 
 
+// React does not touch the actual DOM a lot and that's why everything is fast in React.
 
 // Diff Alorithm : It finds out the difference between the updated Virtual DOM and the previous Virtual DOM. It then calculate the difference it basically updates the actual DOM using the updated Virtual DOM on every render cycle. This algo falls under React Fiber.
 
